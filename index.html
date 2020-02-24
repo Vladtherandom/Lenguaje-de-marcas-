@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!--Define que el documento esta bajo el estandar de HTML 5-->
+<html>
+<!--Empezamos la estructura del HTML poniendo <html> al principio y cerrando todo el documento con </html>-->
+
+<head>
+    <!--La estructura principal de HTML es <head> encabezado y <body> cuerpo.
+       En esta parte es donde se guardan todos los demás archivos que se están utilizando en tu pagina web.
+       Representa una colección de metadatos acerca del documento, incluyendo enlaces a, o definiciones de, scripts y hojas de estilo.-->
+    <meta charset="UTF-8">
+    <title>aprende HTML</title>
+
+    <meta name="description" content="Web para el trabajo de Lenguaje de Marcas">
+    <meta name="keywords" content="HTML, CSS, Lenguaje Marcas">
+    <meta name="author" content="Jorge Ballarin">
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!--Esta parte representa nuestra inclusión del documento
+                                                              de css.css que hemos metido en nuestro HTML. Encargado de darle atractivo visual y la parte grafica de nuestro trabajo-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!--Hemos añadido una extensión
+                                                                                                de un tipo de letra concreto para todo nuestro documento "Open Sans"-->
+
+</head>
+
+<body>
+    <!--Nuestro <body> lo hemos dividido en <header> parte de arriba, <main> todo contenido de nuestra pagina web y 
+      <footer> que representa el pie de la página.
+      Hay que saber que la página la he estructurado toda ella en cajas para que me sea más facil su manejo y no me bloquee otras secciones de la página.-->
+    <header class="jorge-header">
+        <!--Mi header tiene una class "jorge-header" para distinguirla del resto de mi documento HTML
+                                 de esta forma la modificación en el css será más fácil y rápida.-->
+        <div class="icon col-muypeque-2">
+            <!--Defino las clases icon y todas las columnas de mi documento. De esta forma
+                                         cuando divida las partes de mi página web en cajas ("divs") podré darles el tamaó con col-muypeque-2.
+                                         En este caso "icon col-muypeque-2" significa que el icono de mi cabecera ocupara un espacio de columna 
+                                         del 20% de mi <header>-->
+            <img src="./img/arnold.png" alt="Caricatura de Arnold">
+            <!--Añado mi imagen que ocupara el 20% de mi cabecera.-->
+        </div>
+        <div class="title col-muypeque-8 row">
+            <!--Añado el contenido del resto de mi cabecera que ocupará el 80% restante.-->
+            <h1>Jorge's Web Desing</h1>
+            <!--Para el titulo de mi página web-->
+            <small>Trabajo de Lenguaje de Marcas</small>
+            <!--Para hacer una reseña mas pequeña de algo de menor relevancia.-->
+        </div>
+    </header>
+    <main class="jorge-main">
+        <!--Aquí es donde va a ir todo el contenido principal de mi página web. La he llamado "jorge-main" con la función class-->
+        <div class="col-muypeque-2 col-peque-1">
+            <!--La estructura principal la he dividido en 20% para pantalla completa y 10% cuando la pantalla tenga min-width: 768px-->
+            <div class="indice">
+                <!--El contenido de ese 20%-10% será mi índice, el cual tendrá referenciadores para moverte más rápido en mi página web.-->
+                <a class="elemento-indice" href="#indice-formato">Formato</a>
+                <a class="elemento-indice" href="#indice-comentario">Comentarios</a>
+                <a class="elemento-indice" href="#indice-sintaxis">Sintaxis</a>
+                <a class="elemento-indice" href="#indice-saltolinea">Salto de linea</a>
+                <a class="elemento-indice" href="#indice-hiperenlace">Hiperenlace</a>
+                <a class="elemento-indice" href="#indice-anclaje">Anclaje</a>
+                <a class="elemento-indice" href="#indice-hiperenlaceint">Hiperenlace interno</a>
+                <a class="elemento-indice" href="#indice-hiperenlaceg">Hiperenlace general</a>
+                <a class="elemento-indice" href="#indice-href">Hiperenlace href</a>
+                <a class="elemento-indice" href="#indice-titulos">Titulos</a>
+                <a class="elemento-indice" href="#indice-parrafo">Parrafo</a>
+                <a class="elemento-indice" href="#indice-parrafopre">Parrafo preformateado</a>
+                <a class="elemento-indice" href="#indice-listas">Listas</a>
+                <a class="elemento-indice" href="#indice-seccion">Seccion</a>
+                <a class="elemento-indice" href="#indice-imagenes">Imagenes</a>
+                <a class="elemento-indice" href="#indice-simbolos">Simbolos</a>
+                <a class="elemento-indice" href="#indice-tablas">Tablas</a>
+                <a class="elemento-indice" href="#indice-formularios">Formularios</a>
+                <a class="elemento-indice" href="#indice-formularioslabel">Label</a>
+                <a class="elemento-indice" href="#indice-formulariosmenu">Menus</a>
+                <a class="elemento-indice" href="#indice-submenu">Submenus</a>
+                <a class="elemento-indice" href="#indice-textarea">Editor de texto</a>
+                <a class="elemento-indice" href="#indice-listavalores">Lista de valores</a>
+                <a class="elemento-indice" href="#indice-inputs">Inputs de valores</a>
+                <a class="elemento-indice" href="#indice-boton">Botones</a>
+                <a class="elemento-indice" href="#indice-marcos">Marcos</a>
+                <a class="elemento-indice" href="#indice-multimediam">Audios</a>
+                <a class="elemento-indice" href="#indice-multimediav">Videos</a>
+                <a class="elemento-indice" href="./css.html" target="_blank">CSS</a>
+            </div>
+        </div>
+        <div class="contenido col-muypeque-8 col-peque-9">
+            <!--a la derecha del índice he puesto la explicación del documento HTML con imágenes ocupando el 80% a 90% con min-width: 768px-->
+            <div id="indice-formato" class="caja col-muypeque-10">
+                <!--Aquí identifico los "href" definidos en el índice con las clases "id" "indice-formato".
+                                                                  La caja ocupa el 100%-->
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 formato">
+                        <!--La caja anterior la subdivido en otras 2 con una ocupacion del 100% a 50% con min-width: 768px-->
+                        <h1 class="titulo-divs">Estructura basica de un documento HTML</h1>
+                        <!--Titulo de la parte visual de lo que apareceria en una página web, a la que le he puesto la class de "titulo-divs"
+                            para darle formato en el css.-->
+
+                        <!--El elemento ul representa una lista no ordenada de ítems que, en contraste con las lista ordenadas (elemento ol), no produce significados diferentes si el orden de los ítems es alterado.
+                                Los ítems de ambas listas, ordenadas y no ordenadas, son representados por el elemento li.-->
+
+                        <!DOCTYPE HTML>
+                        <html lang="es">
+
+                        <head>
+                            <title>Título de la página</title>
+                            <meta charset="UTF-8">
+                            <meta name="author" content="Jorge-Ballarin">
+                        </head>
+
+                        <body>
+                            <p>Contenido de la página</p>
+                        </body>
+
+                        </html>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <!--La segunda parte de la caja principal con class="caja col-muypeque-10" servirá para añadir una imagen gráfica para ayudar al usuario a saber como se hace.-->
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <!--Mismo título que en la caja anterio con el mismo formato.-->
+                        <img src="./img/codigo_formato.png" alt="codigo">
+                        <!--Aquí es donde añado mi imagen que tiene un src "./img/codigo_formato.jpg" (carpeta donde se encuentra)-->
+                    </div>
+                </div>
+                <p class="line"><br>
+                    La cabecera que utilizaremos en los documentos HTML5 será: <br>
+                    <b>&#60&#33DOCTYPE html&#62.</b><br><br>
+                    El documento HTML tiene dos partes bien diferenciadas. La primera será la cabecera del documento en
+                    la
+                    que irá información relativa a la semántica del documento, metadatos, o a los recursos que necesita
+                    para
+                    su correcta visualización.
+                    Por otro lado tenemos el cuerpo. El cuerpo contendrá la estructura del documento HTML. Dentro del
+                    cuerpo
+                    iremos situando los diferentes elementos del lenguaje HTML para la correcta visualización de la
+                    página.
+                    Pero el documento HTML se caracteriza por empezar y terminar por el elemento html. Es decir, al
+                    principio y al final del documento encontraremos el elemento de inicio y cierre respectivamente.
+                    <br><br>La cabecera se llamará con la etiqueta <b>&#60head&#62</b>.<br><br>
+                    Dentro de la cabecera vamos a encontrar elementos que nos definen la semántica del documento, estos
+                    serán las metatags o metadatos. Además podremos encontrar scripts, hojas de estilo y el más
+                    importante,
+                    el título de la página.
+                    Es importante remarcar que el contenido que se encuentre dentro de la cabecera no tiene una
+                    representación visual directa.
+                    Las metatags de HTML nos permiten dotar de metadatos a la página HTML. Es decir de información
+                    relativa
+                    al contenido de la página, pero que no se representa de ninguna forma. Si bien son muy importantes
+                    ya
+                    que será una parte de información que leerán los buscadores web y un correcto uso de los metadatos
+                    harán
+                    que nuestra página sea mejor o peor indexada.
+                    Por ejemplo podremos encontrar dentro de los metadatos, la descripción de la página, un conjunto
+                    palabras que describan la página, el tipo de codificación de la página, información relativa al
+                    autor de
+                    la página o con qué herramienta ha sido construida, entre otras más.
+                    <br><br>Para hacer referencia al autor del documento. La estructura sería:<br>
+                    <b>&#60meta name="author" content="Jorge Ballarin"&#62</b>
+                    <br>Define la descripción del contenido del documento a forma de resumen. Su uso sería:<br>
+                    <b>&#60meta name="description" content="Web para el trabajo de Lenguaje de Marcas"&#62</b>
+                    <br>Conjunto de palabras que describen el documento. Las palabras van separadas por comas. Se
+                    escribiría
+                    de la siguiente forma:<br>
+                    <b>&#60meta name="keywords" content="HTML, CSS, Lenguaje Marcas"&#62</b>
+                    <br><br>La cuerpo se llamará con la etiqueta <b>&#60body&#62.</b><br><br>
+                    Dentro del cuerpo del documento irán todos los elementos que vamos a ir explicando dentro de este
+                    manual.
+                    <br>Finalmente, el título del documento se definirá utilizando el elemento <b>&#60title&#62.</b><br>
+                    Cómo contenido del elemento encontraremos el texto que represente dicho título.
+                </p><br>
+            </div>
+            <div id="indice-comentario" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 comentario">
+                        <h1 class="titulo-divs">Escribir un comentario en HTML</h1>
+                        <p>
+                            Los comentarios son muy útiles,
+                            ya que sirven para trabajar dar
+                            información dentro de nuestra pagina web,
+                            ya que no ayudan en muchas cosas como:
+                            para describir de que trata cierto código,
+                            para orientar a otros desarrolladores
+                            sobre que hace tu código, para comentar
+                            código que no quieras borrar.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_comentario.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <br>
+                    Los comentarios son especialmente útiles si queremos que el contenido de nuestra página web no
+                    se
+                    vea
+                    alterada de ninguna forma. Para poder mantener su estructura y orden perfectos, o al menos a
+                    nuestro
+                    gusto.
+                    <br>
+                </p>
+            </div>
+            <!--A partir de aqui se elaborarán diferentes cajas para cada concepto de HTML5 que queramos explicar.
+            Se les dara un "id" acorde con el "href" del <head>, la class "caja" con sus respectivos formatos hechos en el css.
+            un "h1" para el titulo, y la parte de HTML que irá en foto en la posterior imagen que se insertara después en otro "div"
+            dentro de la caja principal. Cada caja principal tendrá un "class" que la defina y haga única, esto se hace para que el css solo modifoque esa clase con ese nombre.-->
+            <div id="indice-sintaxis" class="caja col-muypeque-10">
+                <!--Caja id "indice-sintaxis"-->
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 sintaxis">
+                        <!--class sintaxis-->
+                        <h1 class="titulo-divs">La sintaxis en HTML</h1>
+                        <p>
+                            Este texto es un texto de ejemplo
+                            con todas las opciones de HTML5 como el
+                            <b>negrita</b>,
+                            <strong>strong</strong>,
+                            <i>letra italica</i>,
+                            <em>tento enfatizado</em>,
+                            <mark>texto marcado</mark>,
+                            <small>texto pequeño</small>,
+                            <del>texto borrado</del>,
+                            <ins>tento insertado</ins>,
+                            <sub>texto subscrito</sub>,
+                            <sup>texto superescrito</sup>
+                            <s>Sostenido relevante</s>
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_sintaxis.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <br>
+                    La sintaxis dentro de un documento HTML tiene su propio lenguaje propio:<br><br>
+                    <pre>
+                        <b>&#60b>negrita&#60/b&#62 
+                        &#60strong>strong&#60/strong&#62
+                        &#60i>letra italica&#60/i&#62
+                        &#60em>tento enfatizado&#60/em&#62
+                        &#60mark>texto marcado&#60/mark&#62
+                        &#60small>texto pequeño&#60/small&#62
+                        &#60del>texto borrado&#60/del&#62
+                        &#60ins>tento insertado&#60/ins&#62
+                        &#60sub>texto subscrito&#60/sub&#62
+                        &#60sup>texto superescrito&#60/sup&#62
+                        &#60s>Sostenido relevante.&#60/s&#62</b>
+                    </pre>
+                </p>
+            </div>
+            <div id="indice-saltolinea" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 saltolinea">
+                        <h1 class="titulo-divs">Salto de linea en HTML</h1>
+                        <p>
+                            Aquí se pone el contenido del
+                            párrafo que deseas crear.<br>
+                            Si no sabes que película
+                            ver, Conan el bárbaro siempre
+                            es una opción.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_saltolinea.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Los parrafos cuales son representados mediante el elemento <b>p</b>. En este caso el elemento p
+                    tiene
+                    una elemento de inicio y un elemento de cierre. Y el contenido de dentro será lo que representa al
+                    párrafo.<br>
+                    De la misma forma con el <b>br</b> se realizará forzadamente un salto de linea. De lo contrario el
+                    texto
+                    se verá reflejado de forma continua.
+                </p>
+                <br>
+            </div>
+            <div id="indice-hiperenlace" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 hiperenlace">
+                        <h1 class="titulo-divs">Vincular hiperenlaces en HTML</h1>
+                            <p>
+                                Este texto contiene un enlace a la página de
+                                <a href="https://arnoldschwarzenegger.es/">
+                                    Arnold</a>,
+                                el hombre que mató a predator, fue Mr
+                                olimpia 5 veces consecutivas y
+                                además tiene un tanque.<br>
+                                Está y estará siempre en nuestros corazones.
+                            </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_hiperenlace.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Para saber que es un hiperenlace es necerario saber que se hace mediante <b>href</b> metido como
+                    artículo dentro de <b>&#60a&#62.</b>
+                    Los enlaces o hiperenlaces (también llamados hipervínculos) permiten abrir tanto abrir otra página
+                    web
+                    (esté o no en nuestro servidor), así saltar a otro punto de la misma página.<br><br>
+                    <b>&#60a href="https://arnoldschwarzenegger.es/">algo&#60/a&#62</b>
+                </p>
+                <br>
+            </div>
+            <div id="indice-anclaje" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 anclaje">
+                        <h1 class="titulo-divs">Vincular anclajes en HTML</h1>
+                            <p>
+                                <a name="anclaje">Arnold</a>
+                                Este texto contiene un
+                                anclaje que al pinchar
+                                <a href="#anclaje">aquí</a>,
+                                el navegador se sitúa en ese lugar.
+                            </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_anclaje.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    A diferencia de los hiperenlaces un anclaje hace referencia a otro elemento dentro de nuestra propia
+                    página web. Donde simplemente dandole al boton que te marca, te lleva directamente al sitio que
+                    deseas.<br>
+                    De esta forma el usuario pierde menos tiempo y la navegación por la página es más cómoda.
+                </p>
+                <br>
+            </div>
+            <div id="indice-hiperenlaceint" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 hiperenlaceint">
+                        <h1 class="titulo-divs">Vincular hiperenlaces internos en HTML</h1>
+                        <p>
+                            Este texto contiene un
+                            hiperenlace hiperenlace-interno
+                            que nos llevará aqui
+                            <a id="hiperenlace-interno">
+                                "destino"</a>,
+                            donde el navegador se situará en
+                            ese lugar.
+                        </p>
+                        <p>
+                            <a href="#hiperenlace-interno">
+                                Destino.</a>
+                            <!--Si añadimos "#top" dentro de "href"
+                                    volveriamos al principio de la página-->
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_hiperenlaceint.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-hiperenlaceg" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 hiperenlaceg">
+                        <h1 class="titulo-divs">Vincular hiperenlaces generales en HTML</h1>
+                        <p>
+                            Este texto contiene un
+                            hiperenlace-general que nos llevará
+                            al principio (top) de la página de
+                            Arnold.<br>
+                            <a href="https://arnoldschwarzenegger.es/
+                                #top">
+                                Destino.</a>,
+                            donde el navegador se situará en
+                            ese lugar.
+                        </p>
+                        <!--Si añadimos "URL#top" dentro de "href"
+                                volveriamos al principio de la página 
+                                enlazada.-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_hiperenlaceg.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Se denomina hiperenlace-general a un hiperenlace pero que además de llevarte a la página web que
+                    enlaza
+                    te lleva a un sitio concreto de esa misma página web.<br>
+                    En nuestro caso lo hemos hecho con <b>#top</b>, que nos llevará directamente a la parte superior de
+                    esa
+                    página.
+                </p>
+                <br>
+            </div>
+            <div id="indice-href" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 href">
+                        <h1 class="titulo-divs">Vincular con href en HTML</h1>
+                        <p>
+                            Para referenciar algo en
+                            nuestra página:
+                            El atributo "href" especifica
+                            el destino del enlace.
+                            <a href="https://es.wikipedia.org/wiki/Arnold_Schwarzenegger">
+                                ¡Conoce a un heroe!</a>
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_href.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-titulos" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 titulos">
+                        <h1 class="titulo-divs">Titulos de HTML desde h1 hasta h6</h1>
+                        <ul>
+                            <li>
+                                <h1>Texto de titulo de primer nivel</h1>
+                            </li>
+                            <li>
+                                <h2>Texto de titulo de segundo nivel</h2>
+                            </li>
+                            <li>
+                                <h3>Texto de titulo de tercero nivel</h3>
+                            </li>
+                            <li>
+                                <h4>Texto de titulo de cuarto nivel</h4>
+                            </li>
+                            <li>
+                                <h5>Texto de titulo de quinto nivel</h5>
+                            </li>
+                            <li>
+                                <h6>Texto de titulo de sexto nivel</h6>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_titulos.jpg" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Si seguimos revisando el poder dar formato al texto nos encontramos con los elementos de cabecera o
+                    titulares.<br>
+                    Estos elementos nos servirán para poner títulos a las diferentes secciones que tenga nuestra web.
+                    Son
+                    dos elementos, el de inicio y el de cierre y el contenido será el nombre de la cabecera o
+                    titular.<br>
+                    Los <b>&#60h1&#62, &#60h2&#62, &#60h3&#62, &#60h4&#62, &#60h5&#62, &#60h6&#62</b> son los diferentes
+                    tamañosasociados a los títulos.
+                </p>
+                <br>
+            </div>
+            <div id="indice-parrafo" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 parrafo">
+                        <h1 class="titulo-divs">Contrucción de párrafos en HTML</h1>
+                            <p>
+                                <!--Escribir dentro de HTML 
+                                da igual los saltos de linea, 
+                                estos no se verán. A no ser que 
+                                los pongas exprofeso con la 
+                                nomenclatura <br>-->
+                                Aquí se pone el contenido
+                                del párrafo que deseas crear.
+                            </p>
+                            <p>
+                                Si no sabes que película ver,
+                                Conan el bárbaro siempre es
+                                una opción.
+                            </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_parrafo.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-parrafopre" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 parrafopre">
+                        <h1 class="titulo-divs">Contrucción de párrafos preformateados en HTML</h1>
+                            <pre>
+                                Aquí se pone el contenido 
+                                del párrafo que deseas crear.
+                            </pre>
+                            <pre>
+                                Si no sabes que película ver, 
+                                Conan el bárbaro siempre es 
+                                una opción.
+                            </pre>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_parrafopre.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    A diferencia del<b>p</b> el <b>pre</b>, sirve para que el mismo formato que tenemos en el código de
+                    HTML
+                    se conserve en la visulización al publico de nuestra página web.
+                </p>
+                <br>
+            </div>
+            <div id="indice-listas" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 listas">
+                        <h1 class="titulo-divs">Crear listas ordenadas en HTML</h1>
+                        <ol>
+                            <li>Primero en la lista</li>
+                            <li>Segundo en la lista</li>
+                            <li>Tercero en la lista</li>
+                        </ol>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_listas.jpg" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Las listas en HTML nos permite crear conjuntos de elementos en forma de lista dentro de una página,
+                    todos los cuales irán precedidos, generalmente, por un guión o número.<br><br>
+                    Las listas en HTML ordenadas se representan mediante el elemento <b>ol</b>.<br>
+                    Cada uno de los elementos de la lista ordenada se representará mediante el elemento
+                    <b>li</b>.<br><br>
+                    El atributo start nos permite indicar el número por el cual queremos que empiece la lista, ya que
+                    por
+                    defecto las listas ordenadas en HTML empiezan por el número 1.
+                    Los valores indicados al principio son los que le podemos asignar al atributo type de la lista
+                    ordenada
+                    en HTML:<br>
+                    <b>&#60ol type="tipo">algo&#60/ol&#62.</b>
+                </p>
+                <br>
+            </div>
+            <div id="indice-seccion" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 seccion">
+                        <h1 class="titulo-divs">Ordenar en secciones en HTML</h1>
+                        <section>
+                            <h4>Arnold</h4>
+                            <p>
+                                LaSs últimas tres o cuatro repeticiones
+                                es lo que hace que el músculo crezca.
+                                Esta área del dolor divide el campeón
+                                de alguien que no es un campeón. Eso es
+                                lo que la mayoría de las personas no tienen,
+                                las agallas para seguir adelante y decir
+                                que van a pasar por el dolor, no importa
+                                lo que pase.
+                            </p>
+                        </section>
+                        <aside>
+                            <h3>Repeticiones</h3>
+                            <p>
+                                En el deporte del culturismo, las repeticiones
+                                son el número de veces seguidas que se debe
+                                hacer un ejercicio para desarrollar hipertrofia.
+                            </p>
+                        </aside>
+                        <!--Existen multitud de "secciones distintas como 
+                                la <nav> para navegadores, <article> para artículos
+                                o etiquetas-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_seccion.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Tanto <b>&#60div&#62</b> como <b>&#60section&#62</b> sirven para hacer "cajas" y definirlas de forma
+                    independiente al resto de nuestro documento HTML.<br>
+                    De esta forma se nos hará mucho más fácil y cómodo tratar la página y evitar que se nos desordenen
+                    las
+                    estructuras.
+                </p>
+                <br>
+            </div>
+            <div id="indice-imagenes" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 imagenes">
+                        <h1 class="titulo-divs">Importar imagenes en HTML</h1>
+                        <img class="img-arnold" src="./img/arnold.png" alt="Caricatura de Arnold">
+                        <!--Existen multitud de tipos 
+                        distintas de imágenes como 
+                        png, jpg, gif, apng, svg, pdf, mng-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_imagenes.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-simbolos" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 simbolos">
+                        <h1 class="titulo-divs">Simbolos especiales en HTML</h1>
+                        <p>
+                            Aquí&nbspse&nbsppone&nbspel&nbspcontenido&nbsp
+                            del&nbsppárrafo&nbspque&nbspdeseas&nbspcrear&#46
+                        </p>
+                        <p>
+                            Si&nbspno&nbspsabes&nbspque&nbsppelícula&nbsp
+                            ver&#44 Conan&nbspel&nbspbárbaro&nbspsiempre
+                            es&nbspuna&nbspopción&#46
+                        </p>
+                        <!--Existen multitud de simbolos 
+                            distintos para usar en HTML, en esta página 
+                            encontrarás todos los que existen
+                            https://dev.w3.org/html5/html-author/charref-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_simbolos.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Cuando estemos insertando texto en nuestros documentos HTML puede darse el caso de que necesitemos
+                    insertar símbolos. Bien ya sean símbolos de la codificación que estemos utilizando o símbolos de
+                    carácter general.<br>
+                    Para ello HTML nos ofrece las entidades. Las entidades son unas estructuras que, mediante el uso de
+                    una
+                    codificación, nos permiten representar un símbolo.<br><br>
+                    La estructura de la entidad HTML es un ampersand(&) seguido del código o nombre de la entidad y
+                    terminado en un punto y coma.<br>
+                    <b>https://dev.w3.org/html5/html-author/charref</b> (este enlace tiene todos las entidades).
+                </p>
+                <br>
+            </div>
+            <div id="indice-tablas" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 tablas">
+                        <h1 class="titulo-divs">Tablas en HTML</h1>
+                        <table>
+                            <!--Tabla entera-->
+                            <thead>
+                                <!--Encabezado de tabla-->
+                                <th>Nombre</th>
+                                <!--Table header 
+                                            o encabezado-->
+                                <th>Edad</th>
+                                <th>Altura</th>
+                            <tbody>
+                                <!--Cuerpo de la tabla-->
+                                <tr>
+                                    <!--Table row o fila-->
+                                    <td>Jorge</td>
+                                    <!--Tabla data 
+                                                o columna-->
+                                    <td class="numeric">30</td>
+                                    <td class="numeric">1.90</td>
+                                </tr>
+                                <tr>
+                                    <td>Lucas</td>
+                                    <td class="numeric">22</td>
+                                    <td class="numeric">1.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Andrea</td>
+                                    <td class="numeric">15</td>
+                                    <td class="numeric">1.45</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_tablas.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-formularios" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 formularios">
+                        <h1 class="titulo-divs">Formularios en HTML</h1>
+                        <form action="Pagina web.html">
+                            <!--Concepto más amplio para formar formularios, donde hay que especificar donde se lleva a cabo la accion de todo el contenido del formulario
+                                                    donde más concretamente he señalado en "Pagina web.html" con el comando action propio de HTML-->
+                            <p>
+                                Nombre:
+                                <input type=text name=nombre value="" size=25 maxlength=50>
+                                <!--Para añadir cosas a nuestro formulario como por ejemplo una pestaña para indicar tu nombre se realiza mediante etiquetas <input>,
+                                                            en este caso type es el tipo de viñeta que creamos "text" es para indicar que es solo de texto,
+                                                            size indica el tamaño de la viñeta, maxlength indica de cuantos caracteres caben como mucho dentro de la viñeta 
+                                                            y value es si queremos que esté algo escrito por defecto "(vacio en nuestro caso)".-->
+                            </p>
+                            <p>
+                                Correo electrónico:
+                                <input type=text name=nombre value="" size=25 maxlength=50>
+                            </p>
+                            <p>
+                                <input type=submit name=Enviar value="Enviar">
+                                <!--La diferencia con este es que el valor por defecto es "Enviar" y es de tipo submit.-->
+                            </p>
+                            <p>
+                                ¿Arnold es tu ídolo?
+                                <input type=checkbox name=nombre>
+                                <!--Consiste en una casilla de verificación que confirma al marcarla una determinada premisa.-->
+                                <!--<input type=radio name=radio> seria un boron radial con un circulo oscuro como marcado, en vez de cuadrado con un tick-->
+                            </p>
+                            <h3>Selecciona el grado de idolatría</h3>
+                            <select name=menu size=3 multiple>
+                                <!--La etiqueta select hace un menú de varias opciones con la característica multiple,
+                                                            donde podremos bajar en el menu con la ruleta del ratón viendo las diferentes opciones.-->
+                                <option value=uno>uno</option>
+                                <option value=dos>dos</option>
+                                <option value=tres>tres</option>
+                                <option value=cuatro>cuatro</option>
+                                <option value=siete>Infinito</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_formularios.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Concepto más amplio para formar formularios, donde hay que especificar donde se lleva a cabo la
+                    accion
+                    de todo el contenido del formulario
+                    donde más concretamente he señalado en "Pagina web.html" con el comando action propio de HTML
+                    Para añadir cosas a nuestro formulario como por ejemplo una pestaña para indicar tu nombre se
+                    realiza
+                    mediante etiquetas <input>,
+                    en este caso type es el tipo de viñeta que creamos "text" es para indicar que es solo de texto,
+                    size indica el tamaño de la viñeta, maxlength indica de cuantos caracteres caben como mucho dentro
+                    de la
+                    viñeta
+                    y value es si queremos que esté algo escrito por defecto "(vacio en nuestro caso)".
+                </p>
+                <br>
+            </div>
+            <div id="indice-formularioslabel" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 formularioslabel">
+                        <h1 class="titulo-divs">Etiquetas label en formularios de HTML</h1>
+                        <form action="Pagina web.html">
+                            <label for="Name">Nombre: </label>
+                            <input type="text" id="Name" name="Name" /><br>
+                            <label for="Name">E-mail:</label>
+                            <input type=email name=email>
+                            <!--Esta parte está genial, 
+                                    porque el type email, 
+                                    es propia de HTML y por 
+                                    tanto cuando ponemos 
+                                    a escribir en la viñeta creada
+                                    nos aparecen las diferentes 
+                                    opciones de correo 
+                                    electrónido que tenemos guardadas 
+                                    en nuestro ordenador.-->
+                        </form>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_formularioslabel.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Los formularios HTML son elementos de las páginas web que nos sirven para recuperar información del
+                    usuario y enviarla al servidor para que pueda ser procesada.
+                    Dentro de los campos que podemos incluir en formularios HTML encontramos los siguientes:<br><br>
+                    <pre>
+                        <b>Campos de entrada de datos:</b> Son los elementos básicos de un formulario ya que son los que nos permiten recuperar información del usuario de diferentes formas.
+                        <b> Campos de textos.</b>
+                        <b> Contraseñas.</b>
+                        <b> Checkbox.</b>
+                        <b> Radios.</b>
+                        <b> Botones de envío.</b>
+                        <b> Botones de borrado.</b>
+                        <b> Ficheros.</b>
+                        <b> Campos Ocultos.</b>
+                        <b> Imágenes.</b>
+                        <b> Botones.</b>
+                        <b>Áreas de texto.</b>
+                        <b>Combos de selección.</b>
+                    </pre>
+                    <pre>
+                        <b>type:</b> indica el tipo de campo de entrada de datos que vamos a utilizar. Dependiendo del tipo que indiquemos obtendremos un resultado u otro. Los valores que puede tener el atributo type son: “text”, “password”, “checkbox”, “radio”, “submit”, “reset”, “file”, “hidden”, “image” y “button”.
+                        <b>id:</b>es el identificador del campo. Es importante ya que será el nombre por el cual podremos identificar, de forma unívoca, al campo.
+                        <b>size:</b> será el tamaño del campo. Es decir, el número de caracteres que podríamos insertar en el campo de texto.
+                        <b>name:</b> es el nombre del campo el cual se enviará desde el formulario al servidor.
+                        <b>value:</b> será el valor por defecto que tendrá el campo de texto y que le aparecerá al usuario al cargar el formulario.
+                    </pre>
+                </p>
+                <br>
+            </div>
+            <div id="indice-formulariosmenu" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 formulariosmenu">
+                        <h1 class="titulo-divs">Menus en HTML</h1>
+                        <form action="Pagina web.html">
+                            <h3>Indica el numero de peliculas
+                                que has visto de Arnold</h3>
+                            <select name=menu>
+                                <option value=uno>De una a 5</option>
+                                <option value=dos>De 5 a 10</option>
+                                <option value=tres>De 10 a 15</option>
+                                <option value=cuatro>De 15 a 20</option>
+                                <option value=uno selected>Todas</option>
+                                <!--Esta última será la que esté marcada 
+                                    por defecto con la opción selected.-->
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_formulariosmenu.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-submenu" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 submenu">
+                        <h1 class="titulo-divs">Submenus en HTML</h1>
+                        <form action="Pagina web.html">
+                            <h3>Cuantas veces has estado en California</h3>
+                            <select name=menu>
+                                <option value=uno>Una</option>
+                                <optgroup label=dos>
+                                    <!--<optgroup> sirve para hacer 
+                                    un submenu en una o varias de 
+                                    las opciones del menu principal.-->
+                                    <option value=dos_a>
+                                        Dos, pero de pasada
+                                    </option>
+                                    <option value=dos_b>
+                                        Dos, porque la segunda
+                                        querías ver a Arnold
+                                    </option>
+                                </optgroup>
+                                <option value=tres>Tres</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_submenu.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-textarea" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 textarea">
+                        <h1 class="titulo-divs">Editor de texto de HTML</h1>
+                        <textarea name="texto" rows="10" cols="50">
+                        Habla sobre tu tema favorito aquí mismo.
+                        </textarea>
+                        <!--rows significa el número de líneas 
+                                visibles en el control
+                                y cols La anchura visible del 
+                                control de texto, en caracteres 
+                                de anchura media.-->
+                        <!--La etiqueta <textarea> contiene 
+                            multitud de atributos autocapitalize, 
+                            autocomplete, autofocus, cols, 
+                            disabled, form, maxlength, minlength, 
+                            name, placeholder, readonly, required, 
+                            rows, selectionDirection, selectionEnd, 
+                            selectionStart, spellcheck y wrap -->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_textarea.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Un elemento algo más avanzado que el campo de entrada de datos es el área de texto. Mediante un área
+                    de
+                    texto tenemos la capacidad de que el usuario inserte una gran cantidad de datos y además que esos
+                    datos
+                    puedan estar en diferentes líneas.
+                    Los atributos que nos encontramos en un textarea son:<br><br>
+
+                    <pre>
+                    <b>rows:</b> indica el número de filas que tiene el área de texto.
+                    <b>cols:</b> indica el número de columnas que tiene el área de texto.
+                    <b>name:</b> al igual que sucede con otros elementos del formulario, name contiene el nombre del campo, el cual será enviado al servidor para ser procesado.
+                    </pre>
+                </p>
+                <br>
+            </div>
+            <div id="indice-listavalores" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 listavalores">
+                        <h1 class="titulo-divs">Lista de valores en HTML</h1>
+                        <label>Elige el músculo que quieras entrenar:
+                            <input list="musculos" name="musculo" /></label>
+                        <datalist id="musculos">
+                            <!--Menú desplegable-->
+                            <option value="Biceps">
+                            <option value="Triceps">
+                            <option value="Deltoides">
+                            <option value="Dorsal">
+                            <option value="Cuadriceps">
+                            <option value="Pectoral">
+                        </datalist>
+                        <!--Una cosa importante a tener en 
+                                cuenta es que el atributo id 
+                                de la etiqueta <datalist> ha de 
+                                ser igual que el atributo list 
+                                de la etiqueta <input>.
+                                La etiqueta <datalist> especifica 
+                                una lista de opciones predefinidas
+                                para un elemento <input>.La etiqueta 
+                                <datalist> se usa para proporcionar 
+                                una función de "autocompletar" en los 
+                                elementos <input>.
+                                Los usuarios verán una lista desplegable 
+                                de opciones predefinidas a medida que 
+                                ingresan datos.-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_listavalores.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-inputs" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 inputs">
+                        <h1 class="titulo-divs">Inputs en HTML</h1>
+                        Password:
+                        <input type="password" name=nombre value="" size=25 maxlength=50>
+                        Search:
+                        <input type="search" name=nombre value="" size=25 maxlength=50>
+                        Tel:
+                        <input type="tel" name=nombre value="" size=25 maxlength=50>
+                        Url:
+                        <input type="url" name=nombre value="" size=25 maxlength=50>
+                        Email:
+                        <input type="email" name=nombre value="" size=25 maxlength=50>
+                        Range:
+                        <input type="range" name=nombre value="" size=25 maxlength=50>
+                        Hidden:
+                        <input type="hidden" name=nombre value="" size=25 maxlength=50>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_inputs.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-boton" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 boton">
+                        <h1 class="titulo-divs">Botón en HTML</h1>
+                        <button name=submit value=submit type=submit>
+                            Enviar
+                            <img class="enviar" src="./img/enviar.gif" alt="enviar">
+                        </button>
+                        <button name=reset type=reset>
+                            Limpiar
+                            <img class="borrar" src="./img/borrar.gif" alt="borrar">
+                        </button>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_boton.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Una vez que hemos insertado campos de texto en nuestro formulario es hora de insertar botones.
+                    Mediante
+                    los botones podremos realizar operaciones de envío del formulario, de manipulación de datos,
+                    borrado.<br>
+                    Existen dos formas de insertar botones dentro de un formulario: el elemento input y el elemento
+                    button.
+                    La primera es recurre nuevamente al elemento input que hemos visto anteriormente para los campos de
+                    texto.<br>
+                    La sintaxis para un botón mediante un elemento input será:<br><br>
+                    <b>&#60input type="button" value="TextoBotón"/></b>
+                </p>
+                <br>
+            </div>
+            <div id="indice-marcos" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 marcos">
+                        <h1 class="titulo-divs">Marcos en HTML</h1>
+                        <iframe id="paginaArnold" title="paginaArnold" width="500" height="500"
+                            src="https://arnoldschwarzenegger.es/">
+                        </iframe>
+                        <!--El elemento HTML <iframe> 
+                            (de inline frame) representa un 
+                            contexto de navegación anidado, 
+                            el cual permite incrustrar otra página 
+                            HTML en la página actual.-->
+                        <!--Existen multitud de atributos para 
+                            etiquetas <iframe>: align, frameborder,
+                            height, longdesc, marginheight,
+                            marginwidth, name, sandbox, scrolling,
+                            src, srcdoc y width-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_marcos.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-multimediam" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 multimediam">
+                        <h1 class="titulo-divs">Audios en HTML</h1>
+                        <audio class="musica" controls src="./img/bso_terminator.m4a" width="100%"></audio>
+                        <!--Para incluir un archivo de musica 
+                            a la pagina se utiliza la etiqueta 
+                            <video>.-->
+                        <!--Tiene multitud de atributos
+                            src = ponerle nombre,
+                            width = anchura, height = altura
+                            controls = permite activar la barra de 
+                            control del navegador web,
+                            autoplay = inicia el video 
+                            automaticamente una vez cargue la web,
+                            muted = para silenciar el sonido del video
+                            loop = para poner el video en bucle
+                            preload = como carga el video.-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_multimediam.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+            <div id="indice-multimediav" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 multimediav">
+                        <h1 class="titulo-divs">Videos en HTML</h1>
+                        <video class="video" controls src="./img/discurso_arnold.mp4" width="100%"></video>
+                        <!--Para incluir un video a la pagina se 
+                            utiliza la etiqueta <video>.-->
+                        <!--Tiene multitud de atributos
+                            src = ponerle nombre,
+                            width = anchura, height = altura
+                            controls = permite activar la barra de 
+                            control del navegador web,
+                            autoplay = inicia el video 
+                            automaticamente una vez cargue la web,
+                            muted = para silenciar el sonido del video
+                            loop = para poner el video en bucle
+                            preload = como carga el video.-->
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_multimediav.png" alt="codigo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="jorge-footer">
+        <!--Parte final de nuestro documento HTML5 y por tanto de nuestra página web.
+                                 Añadiremos un texto famoso de Arnol y algo mas que queramos para terminar nuestra página.-->
+        <div class="subir">
+            <a href="#top">Volver arriba</a>
+        </div>
+        <small>
+            <p>¡Jorge! ¡¿Qué es lo mejor de la vida?!:</p>
+            <p>Aplastar a tus enemigos, verlos destrozados y oir el lamento de sus mujeres...</p>
+        </small>
+    </footer>
+</body>
+
+</html>

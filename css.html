@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--Define que el documento esta bajo el estandar de HTML 5-->
+<html>
+<!--Empezamos la estructura del HTML poniendo <html> al principio y cerrando todo el documento con </html>-->
+
+<head>
+    <!--La estructura principal de HTML es <head> encabezado y <body> cuerpo.
+       En esta parte es donde se guardan todos los demás archivos que se están utilizando en tu pagina web.
+       Representa una colección de metadatos acerca del documento, incluyendo enlaces a, o definiciones de, scripts y hojas de estilo.-->
+    <meta charset="UTF-8">
+    <title>aprende CSS</title>
+
+    <meta name="description" content="Web para el trabajo de Lenguaje de Marcas">
+    <meta name="keywords" content="HTML, CSS, Lenguaje Marcas">
+    <meta name="author" content="Jorge Ballarin">
+    <meta name="robots" content="index, follow" />
+
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!--Esta parte representa nuestra inclusión del documento
+                                                              de css.css que hemos metido en nuestro HTML. Encargado de darle atractivo visual y la parte grafica de nuestro trabajo-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!--Hemos añadido una extensión
+                                                                                                de un tipo de letra concreto para todo nuestro documento "Open Sans"-->
+
+</head>
+
+<body>
+    <!--Nuestro <body> lo hemos dividido en <header> parte de arriba, <main> todo contenido de nuestra pagina web y 
+      <footer> que representa el pie de la página.
+      Hay que saber que la página la he estructurado toda ella en cajas para que me sea más facil su manejo y no me bloquee otras secciones de la página.-->
+    <header class="jorge-header">
+        <!--Mi header tiene una class "jorge-header" para distinguirla del resto de mi documento HTML
+                                 de esta forma la modificación en el css será más fácil y rápida.-->
+        <div class="icon col-muypeque-2">
+            <!--Defino las clases icon y todas las columnas de mi documento. De esta forma
+                                         cuando divida las partes de mi página web en cajas ("divs") podré darles el tamaó con col-muypeque-2.
+                                         En este caso "icon col-muypeque-2" significa que el icono de mi cabecera ocupara un espacio de columna 
+                                         del 20% de mi <header>-->
+            <img src="./img/arnold.png" alt="Caricatura de Arnold">
+            <!--Añado mi imagen que ocupara el 20% de mi cabecera.-->
+        </div>
+        <div class="title col-muypeque-8 row">
+            <!--Añado el contenido del resto de mi cabecera que ocupará el 80% restante.-->
+            <h1>Jorge's Web Desing</h1>
+            <!--Para el titulo de mi página web-->
+            <small>Trabajo de Lenguaje de Marcas</small>
+            <!--Para hacer una reseña mas pequeña de algo de menor relevancia.-->
+        </div>
+    </header>
+    <main class="jorge-main">
+        <!--Aquí es donde va a ir todo el contenido principal de mi página web. La he llamado "jorge-main" con la función class-->
+        <div class="col-muypeque-2 col-peque-1">
+            <!--La estructura principal la he dividido en 20% para pantalla completa y 10% cuando la pantalla tenga min-width: 768px-->
+            <div class="indice">
+                <!--El contenido de ese 20%-10% será mi índice, el cual tendrá referenciadores para moverte más rápido en mi página web.-->
+                <a class="elemento-indice" href="#indice-sintaxiscss">Sintaxis</a>
+                <a class="elemento-indice" href="#indice-colorcss">Colores</a>
+                <a class="elemento-indice" href="#indice-clasescss">Clases</a>
+                <a class="elemento-indice" href="#indice-fuentescss">Fuentes</a>
+                <a class="elemento-indice" href="#indice-textocss">Texto</a>
+                <a class="elemento-indice" href="#indice-listascss">Listas</a>
+                <a class="elemento-indice" href="#indice-herenciacss">Herencia</a>
+                <a class="elemento-indice" href="#indice-modelocajacss">Modelo de caja</a>
+                <a class="elemento-indice" href="#indice-fondocss">Fondo de objeto</a>
+                <a class="elemento-indice" href="#indice-fondo2css">Posición de fondo</a>
+                <a class="elemento-indice" href="#indice-selectorescss">Selectores</a>
+                <a class="elemento-indice" href="#indice-posicioncss">Posicionamiento</a>
+                <a class="elemento-indice" href="#indice-floatcss">Elementos flotantes</a>
+                <a class="elemento-indice" href="#indice-especificidadcss">Especificidad</a>
+                <a class="elemento-indice" href="#indice-mediacss">Media Queries</a>
+                <a class="elemento-indice" href="./index.html" target="_blank">HTML</a>
+            </div>
+        </div>
+        <div class="contenido col-muypeque-8 col-peque-9">
+            <div id="indice-sintaxiscss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <!--Esta caja o div la he diseñado exprofeso para poner 16 pixeles de separación con la linea roja discontinua.-->
+                    <div class="col-muypeque-10 col-media-5 sintaxiscss">
+                        <h1 class="titulo-divs">Sintaxis basica de CSS</h1>
+                        <p>
+                            <b>selector { propiedad: valor; }</b>
+                            <!--El selector identifica la class
+                                concreta de un documento HTML.
+                                La propiedad es un atributos de 
+                                estilo, usado para definir qué 
+                                cosas queremos estilizar sobre 
+                                los selectores indicados.
+                                El valor, indican qué estilo se 
+                                debe aplicar a cada atributo sobre 
+                                cada selector. Los valores se 
+                                expresan con unidades CSS, que 
+                                sirven para cuantificar los valores 
+                                (píxeles, porcentajes o valores)-->
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_sintaxiscss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <!--Y le he dado class a este p en concreto para realizar una separación entre la explicación de lo visualizado y la explicación general del concepto explicado. De tal forma que las separo por una linea roja discontinua definida en el CSS.-->
+                    Los selectores en CSS nos permiten acceder a cualquier elemento o grupo de elementos, para aplicar
+                    estilos sobre el/ellos en una única declaración. Como su nombre indica, permiten seleccionar
+                    aquellos elementos sobre los que se van a aplicar las reglas de estilo.<br>
+                    Dentro del código CSS podemos usar selectores y aplicarles un conjunto de estilos determinado.<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-colorcss" class="caja col-muypeque-10">
+                <!--Los colores no solo son de fondo o al color de las letras, si no que literalmente le pueder dar color desado a cualquier parte de tu página web cuando desees, poniendo el formato adecuado para cada punto.-->
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 colorcss">
+                        <h1 class="titulo-divs">Dar colo en CSS</h1>
+                        <pre>
+                            Todo lo que esté aqui 
+                            escrito tendrá
+                            un fondo morado.
+                        </pre>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_colorcss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Existen multitud de colores distintos como:black, silver, grey, white, maroon, green, lime, olive,
+                    yellow, navy, red, purple, fuchsia, blue, teal, aqua.<br>
+                    Se pueden colocar de forma hexadecimal.<br><br>
+                    <b>#008080 codigo RGB</b><br>
+                    <b>##00FFFF codigo RGB</b>
+                </p>
+                <br>
+            </div>
+            <div id="indice-clasescss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 clasescss">
+                        <h1 class="titulo-divs">Clases de CSS</h1>
+                        <p>
+                            Borde solido de 3 píxeles de grosor y de color rojo.<br>
+                            Además presenta una separación en cada dirección respecto a los bordes dentro de la caja de
+                            40 píxeles, y con un margen superior de 20 píxeles.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_clasescss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Las clases hacen referencia a elementos anidados, donde pueden ser especificadas otras secciones o
+                    divs.<br>
+                    En la imagen se ve claramente como en nuestro documento main (todo el cuerpo) le da estructura a
+                    todas las cajas de forma general.<br><br>
+                    Esto es especialmente útil cuando se tienen multitud de elementos del mismo tipo y se quieren
+                    modificar de forma separada.<br>
+                    <b>Las unidades:</b><br><br>
+                    <b>Absolutas:</b> Las unidades absolutas son un tipo de medida fija que no cambia, que no depende de
+                    ningún otro factor. Son ideales para medios no variables como pueden ser los medios impresos, por
+                    ejemplo, pero son poco flexibles y adecuados para la web en la actualidad, ya que no tienen la
+                    capacidad de adaptarse a diferentes resoluciones o pantallas, que es lo que tendemos a hacer
+                    actualmente.<b>em, ex.</b><br>
+                    <b>Relativas:</b> Las unidades relativas son un tipo de medida más flexible en CSS. Al contrario que
+                    las unidades absolutas, las unidades relativas dependen de algún otro factor (resolución, densidad
+                    de pantalla, etc...).<b>px, pt, pc.</b><br>
+                    <b>Ángulos:</b> Indican el gradiente y posición angular de las cosas.<b>deg, grad,rad.</b><br>
+                    <b>Duración: s, ms.</b>
+                    <b>Frecuencia: hz, khz.</b>
+                    <b>Resolución: dpi, dpcm, dppx.</b>
+                </p>
+                <br>
+            </div>
+            <div id="indice-fuentescss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 fuentescss">
+                        <h1 class="titulo-divs">Fuentes de CSS</h1>
+                        <p>
+                            Indica el nombre de la fuente ("Open Sans") a utilizar.
+                            Un tamaño de fuente de 20 píxeles.
+                            Indica el estilo de la fuente ("italic").
+                            Indica el grosor de la fuente de 40 píxeles.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_fuentescss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <b>font-family:</b> Podemos seleccionar seleccionar cualquier tipografía simplemente escribiendo su
+                    nombre.
+                    Si dicho nombre está compuesto por varias palabras separadas por un espacio, se aconseja utilizar
+                    comillas simples para indicarla.<br>
+                    <b>font-size:</b> Otra de las propiedades más utilizadas con las tipografías es font-size, una
+                    tipografía que permite especificar el tamaño que tendrá la fuente que vamos a utilizar.xx-small,
+                    x-small, small, medium, large, x-large, xx-large son ejemplos posibles a utilizar.<br>
+                    <b>font-style:</b> A las tipografías elegidas se les puede aplicar ciertos estilos, muy útil para
+                    maquetar los textos, como por ejemplo negrita o cursiva (italic).<br>
+                    <b>font-weight:</b> Por otro lado, tenemos el peso de la fuente, que no es más que el grosor de la
+                    misma. También depende de la fuente elegida, ya que no todas soportan todos los tipos de grosor.
+                    bolder, lighter son ejemplos posibles a utilizar.<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-textocss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 textocss">
+                        <h1 class="titulo-divs">Texto en CSS</h1>
+                        <p>
+                            Este texto sobre Arnold presenta una serie de modificaciones atendiendo a la estructura de
+                            CSS dada a este tramo o caja de nuestra página web.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_textocss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Es posible añadir texto con multitud de modificaciones intrínsecas y en el lugar donde deseemos.<br>
+                    De esta forma conseguiremos dar una personalización, a nuestro gusto, de la parte escrita de nuestro
+                    documento.<br>
+                    <p>
+                        <b>Texto real:</b> Este texto sobre Arnold presenta una serie de modificaciones atendiendo a la
+                        estructura de CSS dada a este tramo o caja de nuestra página web.
+                    </p>
+                </p>
+                <br>
+            </div>
+            <div id="indice-listascss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 listascss">
+                        <h1 class="titulo-divs">Listas en CSS</h1>
+                        <ul style="list-style-type: square">
+                            <li>list-style-type: "upper-alpha"</li>
+                            <li>Arnold</li>
+                            <li>Schwarzenegger</li>
+                        </ul>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_listascss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    Por defecto, los navegadores muestran los elementos de las listas no ordenadas con una viñeta
+                    formada por un pequeño círculo de color negro. Los elementos de las listas ordenadas se muestran por
+                    defecto con la numeración decimal utilizada en la mayoría de países.<br>
+                    No obstante, CSS define varias propiedades para controlar el tipo de viñeta que muestran las listas,
+                    además de poder controlar la posición de la propia viñeta. La propiedad básica es la que controla el
+                    tipo de viñeta que se muestra y que se denomina list-style-type.<br>
+                    La propiedad list-style-position permite controlar la colocación de las viñetas.<br>
+                    Cuando se requiere personalizar el aspecto de las viñetas, se debe emplear la propiedad
+                    list-style-image, que permite mostrar una imagen propia en vez de una viñeta automática.<br>
+                </p>
+            </div>
+            <div id="indice-herenciacss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 herenciacss">
+                        <h1 class="titulo-divs">Herencia en CSS</h1>
+                        <p>
+                            En este caso, todo titulo-divs contenido en otra class caja que esté a su vez en el cuerpo
+                            principal de nuestra página web (jorge-main) tendrá esas especificaciones.<br>
+                            Concretamente un tamaño de 44 píxeles, color de texto verde, con estilo italic, subrallado y
+                            con un margen inferior de 16 píxeles.<br>
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_herenciacss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <h2>Herencia</h2><br>
+                    Mecanismo que transmite ciertas propiedades a los elementos contenidos.<br>
+                    <h2>Cascada</h2><br>
+                    Mecanismo que controla el resultado final cuando se aplican varias declaraciones contrapuestas al
+                    mismo elemento.<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-modelocajacss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 modelocajacss">
+                        <h1 class="titulo-divs">Modelo de cajas en CSS</h1>
+                        El modelo de cajas es el comportamiento de CSS que hace que todos los Listas de las páginas se
+                        representen mediante cajas rectangulares.<br>
+                        Existen dos propiedades para definir el tamaño de una caja, height y width.<br>
+                        Height definirá la altura y width la anchura.<br>
+                        Aparte de estas existen Margin, Padding y Border que sirven para organizar mejor las cajas.<br>
+                        Margin establece los márgenes para un elemento.<br>
+                        Padding establece el espacio de relleno requerido por todos los lados de un elemento.<br>
+                        Border permite especificar el estilo, el ancho, y el color del borde de un elemento.<br>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_modelocajacss.jpg" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    En una página web, a cada elemento se le puede considerar una caja.<br>
+                    Esta caja está estructurada de la siguiente forma.<br><br>
+                    <b>Margen:</b> Margin, Padding y Border con los que podemos tener mayor control al momento de
+                    organizar los elementos en un documento HTML.<br>
+                    •margin-top<br>
+                    •margin-right<br>
+                    •margin-bottom<br>
+                    •margin-left<br>
+                    <b>Borde:</b> Ahora hablaremos de la propiedad Border, esta se encuentra entre el margin y el
+                    padding, esta propiedad contiene 3 valores (width, style y color) para poder ser visualizado
+                    correctamente sigamos el siguiente ejemplo.<br>
+                    •border-width<br>
+                    •border-style<br>
+                    •border-color<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-fondocss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 fondocss">
+                        <h1 class="titulo-divs">Contrucción fondos en CSS</h1>
+                        <p>
+                            <h3>SIN DOLOR NO HAY VICTORIA</h3>
+                            Siempre que flojees en tus cosas habrá otro en algún lado haciéndolo mucho mejor que tu.
+                            Alguien no sabes donde, es más listo que tu, y trabaja duro por esforzarse cada vez más.
+                            No hay absolutamente ninguna otra forma de triunfar en la vida si no es por el constante
+                            esfuerzo.
+                            Ninguna de estas, mis reglas, te funcionará a no ser que te comprometas con la ACCIÓN
+                            Para todos el día tiene 24 horas. Así que duerme 6 y aprovecha las 18 horas restantes. Se
+                            que algunos me dirán que duermen 8 o 9 horas al día.Bueno, entonces. Duerman más rápido.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_fondocss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <b></b>Fondo:</b>
+                    •background-color<br>
+                    •background-image<br>
+                    •background-repeat<br>
+                    •background-attachment<br>
+                    •background-position<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-selectorescss" class="caja col-muypeque-10">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 selectorescss">
+                        <h1 class="titulo-divs">Selectores de CSS</h1>
+                        <p>
+                            <a href="https://es.wikipedia.org/wiki/Arnold_Schwarzenegger">
+                                Link de Arnold.</a>
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_selectorescss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <b>Enlaces</b><br>
+                    •:link - normal (antes de ir al enlace por primera vez).<br>
+                    •:visited - visitado (despues de haberlo visitado).<br>
+                    <b>Acción del usuario</b><br>
+                    •:hover – activado por ratón<br>
+                    •:focus – activado por teclado<br>
+                    •:active – pinchado<br>
+                    <b>Formularios</b>
+                    •:enabled (sin estar marcado).<br>
+                    •:checked (Tras ser marcado).<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-posicioncss" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 posicioncss">
+                        <h1 class="titulo-divs">Posiciones en CSS</h1>
+                        <img class="img-arnold" src="./img/arnold.png" alt="Caricatura de Arnold">
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_posicioncss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    <b>position</b>
+                    static: Normal
+                    relative: Relativo a sí mismo
+                    absolute: Relativo a su ancestro
+                    fixed: Relativo a la ventana
+                    <b>Controles</b>
+                    top, bottom
+                    left, right
+                </p>
+                <br>
+            </div>
+            <div id="indice-floatcss" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 floatcss">
+                        <h1 class="titulo-divs">Elementos float en CSS</h1>
+                        <p>
+                            <img class="img-arnold" src="./img/arnold.png" alt="Caricatura de Arnold">
+                            <b>Arnold</b><br>
+                            La resistencia con la que luchas físicamente en el gimnasio. Y la resistencia con la que
+                            luchas en la vida; solo puede desarrollar un carácter fuerte.
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_floatcss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    La propiedad float establece el esquema de posicionamiento flotante para un elemento. Cuando existe
+                    un elemento flotante, los elementos que se encuentran a continuación del elemento flotante fluyen a
+                    lo largo de él, salvo que haya un elemento que tenga establecido la propiedad clear.<br>
+                    Las propiedades float y clear se pueden aplicar a cualquier elemento de una página web.<br>
+                </p>
+                <br>
+            </div>
+            <div id="indice-especificidadcss" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 especificidadcss">
+                        <h1 class="titulo-divs">Especificidad en CSS</h1>
+                        <div class="outer">
+                            <!--Creo dos cajas mas una para lo que hay fuera outer y otra para lo que hay dentro inner, esto lo hago para que se vea claramente la especificidad y como esta actúa con el CSS y HTML.-->
+                            <p>El resto de culturistas están fuera .outer</p>
+                            <div class="inner">
+                                <p>Solo Arnold está dentro .outer .inner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_especificidadcss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line">
+                    La <b>especificidad</b> es un peso (importancia o valor) que se le asigna a una declaración CSS dada, determinada por el número correspondiente de cada tipo de selector. Cuando varias declaraciones tienen igual especificidad, se aplicará al elemento la última declaración encontrada en el CSS. La especificidad solo se aplica cuando el mismo elemento es objetivo de múltiples declaraciones. Según las reglas de CSS, en caso de que un elemento sea objeto de una declaración directa, esta siempre tendrá preferencia sobre las reglas heredadas de su ancestro.
+                </p>
+                <br>
+            </div>
+            <div id="indice-mediacss" class="col-muypeque-10 caja">
+                <div class="caja2">
+                    <div class="col-muypeque-10 col-media-5 mediacss">
+                        <h1 class="titulo-divs">Media Queries en CSS</h1>
+                        <p>
+                            Podemos comprobar que en el momento que nuestra pantalla llega a "min-width: 992px", es decir se hace de un tamaño de 992 o inferior, se da una serie de cambios en la composición de toda la estructura de nuestra página web.<br>
+                            Más concretamente se hacen mas pequeñas las imágenes y ademas las classes codigo que estaban a la derecha pasan a estar debajo de los titulos principales.<br>
+                        </p>
+                    </div>
+                    <div class="col-muypeque-10 col-media-5 codigo">
+                        <h1 class="titulo-divs">Codigo</h1>
+                        <img src="./img/codigo_mediacss.png" alt="codigo">
+                    </div>
+                </div>
+                <p class="line"></p>
+                Las <b>Media Queries</b> son una de las grandes ventajas de CSS, ya que permiten saber qué sistema se está visualizando una página web y, en función de ello, aplicar unas reglas de estilo u otras.  Así, podemos servir un CSS personalizado, acorde las condiciones del navegador o dispositivo que nos visita.<br> 
+                Lo más común es que usemos las Media Queries para detectar las dimensiones de la pantalla.<br>
+                </p>
+                <br>
+            </div>
+        </div>
+    </main>
+    <footer class="jorge-footer">
+        <!--Parte final de nuestro documento HTML5 y por tanto de nuestra página web.
+                                 Añadiremos un texto famoso de Arnol y algo mas que queramos para terminar nuestra página.-->
+        <div class="subir">
+            <a href="#top">Volver arriba</a>
+        </div>
+        <small>
+            <p>¡Jorge! ¡¿Qué es lo mejor de la vida?!:</p>
+            <p>Aplastar a tus enemigos, verlos destrozados y oir el lamento de sus mujeres...</p>
+        </small>
+    </footer>
+</body>
+
+</html>
