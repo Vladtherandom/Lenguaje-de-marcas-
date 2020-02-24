@@ -1,0 +1,528 @@
+/* Lo primero que voy a definir  es la estructuración principal de todo mi documento CSS,
+para ello asocio un tamaño concreto a las cajas o columnas (col) de mi documento HTML.
+Los he dividido en "muypeque", peque, media y grande según los píxeles que ocupa atendiendo
+a la amplitud de la pantalla o dispositivo con el que se habre mi página web. 
+Les he asociado un numero que representa el nivel de ocupación en % dentro de cada <div>
+de mi documento html. De tal forma que un 1 es 10% y 10 es 100%.*/
+.col-muypeque-1,
+.col-peque-1,
+.col-media-1,
+.col-grande-1,
+.col-muypeque-2,
+.col-peque-2,
+.col-media-2,
+.col-grande-2,
+.col-muypeque-3,
+.col-peque-3,
+.col-media-3,
+.col-grande-3,
+.col-muypeque-4,
+.col-peque-4,
+.col-media-4,
+.col-grande-4,
+.col-muypeque-5,
+.col-peque-5,
+.col-media-5,
+.col-grande-5,
+.col-muypeque-6,
+.col-peque-6,
+.col-media-6,
+.col-grande-6,
+.col-muypeque-7,
+.col-peque-7,
+.col-media-7,
+.col-grande-7,
+.col-muypeque-8,
+.col-peque-8,
+.col-media-8,
+.col-grande-8,
+.col-muypeque-9,
+.col-peque-9,
+.col-media-9,
+.col-grande-9,
+.col-muypeque-10,
+.col-peque-10,
+.col-media-10,
+.col-grande-10 {
+  position: relative;
+  /* La posicion la pongo relativa para que al poner 
+  especificaciones no me desaga el resto de mi documento HTML */
+  min-height: 1px;
+  /* Y le asocio una altura minima de 1 pixel */
+}
+
+.col-muypeque-1,
+.col-muypeque-2,
+.col-muypeque-3,
+.col-muypeque-4,
+.col-muypeque-5,
+.col-muypeque-6,
+.col-muypeque-7,
+.col-muypeque-8,
+.col-muypeque-9,
+.col-muypeque-10 {
+  float: left;
+}
+
+/*Por defecto nuestra página web estará siempre en muypeque, ya que puede darse el caso de que se habra con un dispositivo extraordinariamente grande. Por tanto no definimos un tope máximo.  */
+/* Asociamos las dimensiones cuando las class de nuestro HTML son col-muypeque-1 a col-muypeque-10, dandoles porcentajes equitativos.
+No obstante en nuetrodocumento solo hemos utilizado unos pocos de todos los expuestos y planteados.
+La primera division de nuestro head es de col-muypeque-2 para una foto y col-muypeque-8 para el resto de nuestra cabecera.*/
+.col-muypeque-10 {
+  width: 100%;
+}
+
+.col-muypeque-9 {
+  width: 90%;
+}
+
+.col-muypeque-8 {
+  width: 80%;
+}
+
+.col-muypeque-7 {
+  width: 70%;
+}
+
+.col-muypeque-6 {
+  width: 60%;
+}
+
+.col-muypeque-5 {
+  width: 50%;
+}
+
+.col-muypeque-4 {
+  width: 40%;
+}
+
+.col-muypeque-3 {
+  width: 30%;
+}
+
+.col-muypeque-2 {
+  width: 20%;
+}
+
+.col-muypeque-1 {
+  width: 10%;
+}
+
+/* Nunca hemos utilizado el tamaño peque, a no ser que nuestra página web se haga mas pequeña por minimizar el tamaño o por abrirlo en dispositivos pas pequeños */
+@media (min-width: 768px) {
+
+  .col-peque-1,
+  .col-peque-2,
+  .col-peque-3,
+  .col-peque-4,
+  .col-peque-5,
+  .col-peque-6,
+  .col-peque-7,
+  .col-peque-8,
+  .col-peque-9,
+  .col-peque-10 {
+    float: left;
+  }
+
+  .col-peque-10 {
+    width: 100%;
+  }
+
+  .col-peque-9 {
+    width: 90%;
+  }
+
+  .col-peque-8 {
+    width: 80%;
+  }
+
+  .col-peque-7 {
+    width: 70%;
+  }
+
+  .col-peque-6 {
+    width: 60%;
+  }
+
+  .col-peque-5 {
+    width: 50%;
+  }
+
+  .col-peque-4 {
+    width: 40%;
+  }
+
+  .col-peque-3 {
+    width: 30%;
+  }
+
+  .col-peque-2 {
+    width: 20%;
+  }
+
+  .col-peque-1 {
+    width: 10%;
+  }
+}
+
+/* Este tamaño si que ha sido utilizado para asociar tamaño de 50% cuando la pantalla se hace pequeña. Poniendo la explicación de código encima de la foto asociada bien de HTML o de CSS */
+@media (min-width: 992px) {
+
+  .col-media-1,
+  .col-media-2,
+  .col-media-3,
+  .col-media-4,
+  .col-media-5,
+  .col-media-6,
+  .col-media-7,
+  .col-media-8,
+  .col-media-9,
+  .col-media-10 {
+    float: left;
+  }
+
+  .col-media-10 {
+    width: 100%;
+  }
+
+  .col-media-9 {
+    width: 90%;
+  }
+
+  .col-media-8 {
+    width: 80%;
+  }
+
+  .col-media-7 {
+    width: 70%;
+  }
+
+  .col-media-6 {
+    width: 60%;
+  }
+
+  .col-media-5 {
+    width: 50%;
+  }
+
+  .col-media-4 {
+    width: 40%;
+  }
+
+  .col-media-3 {
+    width: 30%;
+  }
+
+  .col-media-2 {
+    width: 20%;
+  }
+
+  .col-media-1 {
+    width: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .col-grande-1,
+  .col-grande-2,
+  .col-grande-3,
+  .col-grande-4,
+  .col-grande-5,
+  .col-grande-6,
+  .col-grande-7,
+  .col-grande-8,
+  .col-grande-9,
+  .col-grande-10 {
+    float: left;
+  }
+
+  .col-grande-10 {
+    width: 100%;
+  }
+
+  .col-grande-9 {
+    width: 90%;
+  }
+
+  .col-grande-8 {
+    width: 80%;
+  }
+
+  .col-grande-7 {
+    width: 70%;
+  }
+
+  .col-grande-6 {
+    width: 60%;
+  }
+
+  .col-grande-5 {
+    width: 50%;
+  }
+
+  .col-grande-4 {
+    width: 40%;
+  }
+
+  .col-grande-3 {
+    width: 30%;
+  }
+
+  .col-grande-2 {
+    width: 20%;
+  }
+
+  .col-grande-1 {
+    width: 10%;
+  }
+}
+
+html {
+  height    : 100%;
+  box-sizing: border-box;
+  /* Le asociamos a nuestro documento HTML el tamaño máxomo posible en 100% y con un border-box.
+  La box-sizingpropiedad CSS nos permite incluir el relleno y el borde en el ancho y alto total de un elemento.*/
+}
+
+html body {
+  position: relative;
+  /* Del 100% anterior seguimos cogiendo el 100% ya que en el body se encuentra el resto de nuestra página web.
+  por tanto anidamos body en html dentro de nuestro CSS y le damos valores como fondo blanco.*/
+  min-height      : 100%;
+  background-color: white;
+}
+
+*,
+/* El asterisco significa que el contenido de esta parte de CSS se aplicará al resto de nuestro documento HTML.
+*/
+*:before,
+*:after {
+  box-sizing : inherit;
+  padding    : 0;
+  margin     : 0;
+  font-family: "Open Sans";
+  /* El tipo de letra para todo nuestro documento será Open Sans*/
+}
+
+ul {
+  list-style: none;
+  /* Quitamos todos los circulos etc que puedan tener nuestras listas ul. (Por gusto personal)*/
+}
+
+/* La estructura en la que me he basado en hacer mi CSS es hacerlo de forma ordenada empezando por la cabecera, seguido del main (body) y terminando por el footer.
+  Además he tenido en cuenta los elementos anidados de tal forma que también he empezado por los más genéricos y grandes y he ido haciendo los mas pequeños y concretos para el final.
+  */
+.jorge-header {
+  height          : 170px;
+  background-color: red;
+  padding         : 20px;
+  color           : white;
+}
+
+.jorge-header .icon {
+  text-align: center;
+}
+
+.jorge-header .icon img {
+  width    : 100%;
+  max-width: 130px;
+}
+
+.jorge-header h1 {
+  font-size: 60px;
+}
+
+.jorge-header small {
+  font-size : 35px;
+  font-style: italic;
+}
+
+.jorge-main {
+  margin    : auto;
+  padding   : 0 40px 120px 40px;
+  margin-top: 40px;
+  overflow  : hidden;
+}
+
+/* Me ha gustado bastante hacer esta parte porque el resultado final de los botones de mi índice hace que quede estética y bonita la parte izquierda.
+  Para esto he utilizado multitud de recursos de CSS como pading (aunque sea minimo se notaba), colos de fondo, de texto, recuadros y sobretodo el display block el más importante. Ya que de esta forma el elemendo nuevo de nuestro índice le obligamos a que esté en una nueva linea dentro de nuestra columna de índice.
+   */
+.jorge-main .indice .elemento-indice {
+  position        : relative;
+  margin          : 3px;
+  padding         : 3px;
+  text-align      : center;
+  font-size       : 14px;
+  background-color: #95e695;
+  text-decoration : none;
+  font-weight     : bold;
+  color           : black;
+  display         : block;
+}
+
+/* Vuelvo a repetir me encanta como ha quedado los botones. Ahora señalo que ciandov el cursor esta encima (hover) cambia de color a un tono mas oscuro.*/
+.jorge-main .indice .elemento-indice:hover {
+  background-color: #2bb62b;
+}
+
+/* Mientra que cuando el botón es punsado cambia de color a un verde aun más oscuro.*/
+.jorge-main .indice .elemento-indice:active {
+  background-color: #176317;
+  color           : white;
+}
+
+.jorge-main .indice .subir {
+  position: fixed;
+}
+
+.jorge-main .contenido {
+  padding-left: 16px;
+}
+
+.jorge-main .caja {
+  border    : solid 3px red;
+  padding   : 40px;
+  margin-top: 20px;
+}
+
+/* Aunque ya lo he explicado en el HTML he utilizado la caja2 para hacer una separación bonita y necesaria entra la parte práctica y explicación concreta de la parte visual y el resto de explicación más generica y teórica.*/
+.jorge-main .caja .caja2 {
+  overflow: hidden;
+}
+
+/* en .caja2 .ALGO es donde he realizado todas las imágenes esplicativas de mi documento, es decir, que el resto  era mas bien estructurar, detallar  y armonizar.
+  Sin embargo es aqui donde hace única mi página a diferencia del resto de gente (la parte de CSS), ya que hay cosas que las he tenido que repasar por internet.*/
+.jorge-main .caja .caja2 .textocss {
+  text-indent   : 0%;
+  text-align    : right;
+  letter-spacing: normal;
+  word-spacing  : initial;
+  text-transform: capitalize;
+  text-decoration: rgb(rgb(163, 66, 66),
+      rgb(99, 170, 99), rgb(82, 82, 122));
+}
+
+.jorge-main .caja .caja2 .listascss {
+  list-style-type    : upper-alpha;
+  list-style-image   : inherit;
+  list-style-position: inside;
+  list-style         : square;
+}
+
+.jorge-main .caja .caja2 .fondocss {
+  background-color     : lawngreen;
+  background-image     : unset;
+  background-repeat    : no-repeat;
+  background-attachment: inherit;
+  background-position  : center;
+}
+
+.jorge-main .caja .caja2 .colorcss {
+  background-color:
+    darkorchid;
+}
+
+.jorge-main .caja .caja2 .selectorescss a:link {
+  color: green;
+}
+
+.jorge-main .caja .caja2 .selectorescss a:visited {
+  color: red;
+}
+
+/* static: relative: absolute: fixed: */
+.jorge-main .caja .caja2 .posicioncss {
+  position: relative;
+}
+
+.jorge-main .caja .caja2 .especificidadcss .outer {
+  color: blue;
+}
+
+.jorge-main .caja .caja2 .especificidadcss .inner {
+  color: red;
+}
+
+.jorge-main .caja .caja2 .floatcss .img-arnold {
+  float: right;
+}
+
+.jorge-main .caja .musica {
+  min-width: 450px;
+}
+
+.jorge-main .caja .boton .enviar {
+  max-width: 240px;
+}
+
+.jorge-main .caja .boton .borrar {
+  max-width: 150px;
+}
+
+.jorge-main .caja .codigo {
+  text-align: center;
+}
+
+.jorge-main .caja .codigo img {
+  max-width: 350px;
+}
+
+/* Al alcanzar un tamaño de 768 o inferior, hago que mis imágenes del apartado de código disminuyan ligeramente el tamaño.*/
+@media (max-width: 768px) {
+  .jorge-main .caja .codigo img {
+    max-width: 280px;
+  }
+}
+
+.jorge-main .caja .titulo-divs {
+  font-size      : 44px;
+  color          : green;
+  font-style     : italic;
+  text-decoration: underline;
+  margin-bottom  : 16px;
+  /* Estos 16píxeles me eran imposibles de cuadrar de ninguna otra forma de no meter margin, ya que padding me parecía muy poco estético.*/
+}
+
+.jorge-main .caja .line {
+  border-top: 3px dotted red;
+  clear     : both;
+  margin-top: 20px;
+}
+
+.jorge-main .imagenes .img-arnold {
+  height: 300px;
+}
+
+.jorge-main .tablas table {
+  border: 2px solid black;
+}
+
+.jorge-main .tablas table th,
+.jorge-main .tablas table td {
+  padding   : 10px;
+  border    : 1px solid black;
+  text-align: center;
+}
+
+.jorge-main .tablas table th.numeric,
+.jorge-main .tablas table td.numeric {
+  text-align: right;
+}
+
+.jorge-footer {
+  position        : absolute;
+  right           : 0;
+  bottom          : 0;
+  left            : 0;
+  height          : 100px;
+  background-color: brown;
+  padding         : 20px;
+  color           : white;
+}
+
+.jorge-footer small {
+  font-style: italic;
+  position  : absolute;
+  bottom    : 20px;
+}
